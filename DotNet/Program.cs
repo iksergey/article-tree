@@ -17,5 +17,7 @@
 
     node5.Children.Add(node6);
     Tree<int> tree = new() { Root = node1 };
+
+    Console.WriteLine(tree.Print());
   }
 }
