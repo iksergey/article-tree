@@ -24,4 +24,13 @@ public class Tree<T>
       }
     }
   }
+
+  public override string ToString()
+  {
+    StringBuilder sb = new();
+    TreeTraversal(this.Root, sb);
+    return sb.ToString()
+             .Replace(" ", "")
+             .Replace("\n", "");
+  }
 }

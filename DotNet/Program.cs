@@ -19,5 +19,6 @@
     Tree<int> tree = new() { Root = node1 };
 
     Console.WriteLine(tree.Print());
+    Console.WriteLine(tree);
   }
 }
