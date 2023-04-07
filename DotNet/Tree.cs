@@ -29,8 +29,11 @@ public class Tree<T>
   {
     StringBuilder sb = new();
     TreeTraversal(this.Root, sb);
-    return sb.ToString()
-             .Replace(" ", "")
-             .Replace("\n", "");
+    return $"[{sb.ToString()
+                  .Replace(" ", "")
+                  .Replace("\n", "")
+                  .Replace("][", ", ")
+                  .Replace("[", "")
+                  .Replace("]", "")}]";
   }
 }
