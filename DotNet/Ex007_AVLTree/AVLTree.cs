@@ -15,6 +15,7 @@ where T : IComparable<T>
     r.UpdateHeight();
     return r;
   }
+
   private AVLNode<T> RotateRight(AVLNode<T> node)
   {
     AVLNode<T> l = node.Left;
@@ -25,8 +26,6 @@ where T : IComparable<T>
     l.UpdateHeight();
     return l;
   }
-
-
 
   public void Append(T value) { Root = Append(Root, value); }
 
@@ -94,7 +93,6 @@ where T : IComparable<T>
     return node;
   }
 
-
   private AVLNode<T> Max(AVLNode<T> node)
   {
     if (node == null) return null;
@@ -120,5 +118,4 @@ where T : IComparable<T>
     TreeTraversal(this.Root, sb);
     return sb.ToString();
   }
-
 }
